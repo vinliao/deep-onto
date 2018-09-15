@@ -15,6 +15,9 @@ model_path = './data/models'
 
 def train_image():
     x_train, x_valid, x_test, y_train, y_valid, y_test = utils.get_image_data(image_size)
+    print('Train data quantity:', x_train.shape[0])
+    print('Test data quantity:', x_test.shape[0])
+    print('Val data quantity:', valid.shape[0])
 
     #instantiate the class
     models = model.Image_classification_models(num_classes=len(utils.image_label_list), \

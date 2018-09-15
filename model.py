@@ -140,12 +140,11 @@ class Image_classification_models():
         model.compile(optimizer='adam', loss='categorical_crossentropy',
                 metrics=['accuracy', metric.precision, metric.recall, metric.f1])
 
-        model.summary()
         model.name = 'MobileNet'
         return model
 
     def get_model_list(self):
-        return [self.VGG16(), self.ResNet50(), MobileNet()]
+        return [self.VGG16(), self.ResNet50(), self.MobileNet()]
 
 class Text_classification_models():
     def __init__(self, units, dropout, recurrent_dropout, num_classes):
